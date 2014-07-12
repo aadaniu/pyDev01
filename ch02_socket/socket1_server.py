@@ -23,6 +23,8 @@ while True:
             break
         if '0' == data:
             conn.send(('[%s] %s server : exit'% ctime(), data).encode())
+        elif  '' == data.strip():
+            print("请求为空")
         else:
             conn.send(data.encode())
 conn.close()
