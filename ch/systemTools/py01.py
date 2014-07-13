@@ -1,6 +1,6 @@
 '''
-Created on 2014年7月13日
-
+帮助手册
+        Created on 2014年7月13日
 主要模块：sys and os
 #glob    For filename expansion
 #socket For network connections and Inter-Process Communication (IPC)
