@@ -1,0 +1,45 @@
+a. 使用easy_install
+  	 easy_install redis  
+ b. 源码安装
+	git clone https://github.com/andymccurdy/redis-py.git  
+	cd redis-py  
+	python setup.py install  
+
+  redis-py提供两个类Redis和StrictRedis用于实现Redis的命令，
+  StrictRedis用于实现大部分官方的命令，并使用官方的语法和命令（比如，SET命令对应与StrictRedis.set方法）。
+  Redis是StrictRedis的子类，用于向后兼容旧版本的redis-py。
+
+   		redis-py使用connection pool来管理对一个redis server的所有连接，避免每次建立、释放连接的开销。
+   默认，每个Redis实例都会维护一个自己的连接池。可以直接建立一个连接池，然后作为参数Redis，
+   这样就可以实现多个Redis实例共享一个连接池。
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
