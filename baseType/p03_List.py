@@ -13,6 +13,7 @@ alist[2]='ling';
 #print(alist[2]);
 #追加元素到list
 #alist.append('appendItem');
+alist.pop(2); #删除并返回
 #print(alist)
 
 #删除：索引-del,值-remove
@@ -36,7 +37,43 @@ for i in range(8):
 
 #内建函数cmp:比较
 #函数 len/max/min/sum/sorted/reversed
+alist.sort();
+alist.reverse();
+
 #list/tuple函数可接受可迭代对象作为参数
 #append、count、extend、index、insert、pop、remove、reverse()、sort、
 #sort、extend、reverse无返回值，在列表内操作
+
+'''
+List 嵌套
+'''
+M=[
+   [1,2,3],
+   [4,55,6]
+]
+for m in M:
+    print(m)
+print(M[1][1]);    
+
+col2=[row[1] for row in M] #获取第2列数据  List comprehensions
+print(col2)
+col2=[row[1]+3  for row in M] #获取第2列数据  List comprehensions
+col2=[row[1]+3  for row in M if row[1]%2==0] #获取第2列数据  List comprehensions
+print(col2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
