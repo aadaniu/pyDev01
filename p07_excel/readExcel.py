@@ -16,7 +16,7 @@ table = data.sheets()[0];
 nrows = table.nrows
 #ncols = table.ncols
 def login(): 
-    url="http://ko.erp.jd.com/shaoling/login.action"
+    url="http://ko.erp.xx.com/shaoling/login.action"
     data={
             "loginName":'',
             "loginPwd":''
@@ -27,7 +27,7 @@ def login():
     res=urllib.request.urlopen(url, postData);#关闭close :res.close();
     print("登录结果：",res.status,res.reason);
     if res.status==200:
-        url="http://ko.erp.jd.com/shaoling/put.action"
+        url="http://ko.erp.xx.com/shaoling/put.action"
         for rowNum in range(nrows ):
             if rowNum>1:
                 row=table.row_values(rowNum);
