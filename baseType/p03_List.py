@@ -54,14 +54,32 @@ M=[
 for m in M:
     print(m)
 print(M[1][1]);    
-
+#==================== List Comprehensions ,就像内置的map/filter函数
 col2=[row[1] for row in M] #获取第2列数据  List comprehensions
 print(col2)
 col2=[row[1]+3  for row in M] #获取第2列数据  List comprehensions
 col2=[row[1]+3  for row in M if row[1]%2==0] #获取第2列数据  List comprehensions
 print(col2)
+#对角线上的值
+coordinate=[M[i][i] for i in [0,1]];
 
+#重复字符
+double=[c*2 for c in 'spam'];
 
+#List comprehension also work on any type that is a sequence in Python.
+
+g=(sum(row) for row in M);#Create a generator of row sums
+print("--》",next(g)) # 第一行
+print(list(map(sum,M))) #map同样的功能：Map sum over items in M
+#py3.0 :comprehension syntax can also be used to create sets and dictionaries
+M=[
+   [1,2,3],
+   [4,5,6]
+]
+iset={sum(row) for row in M};
+iDict={i:sum(M[i]) for i in range(2)};
+
+iDict={x:ord(x) for x in 'spam'};
 
 
 
